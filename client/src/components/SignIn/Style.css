@@ -1,0 +1,37 @@
+.passwordHelp {
+  
+}
+.avatar{
+  margin: auto;
+  border-radius: 50%;
+  font-size: 33px;
+}
+
+.formSignIn {
+margin: 30px auto 30px auto ;
+width: 50%;
+padding: 10px;
+background-image:url("../../images/back.jpg") ;
+background-color: rgba(179, 247, 247, 0.349);
+}
+
+.password ,.email{
+  margin-top: 25px;
+}
+
+.btnsignin{ 
+  width: 64%;
+  background: #cccccc;
+  border-radius: 11%;
+  border: none;
+  color: #ffff;
+  margin: 0% 20% 8% 20%;
+  padding: 8px;
+  height: 36px; 
+}
+
+.btnsignin:hover{ 
+  
+  color: #ffff;
+  background: #1b5ec4;
+}
