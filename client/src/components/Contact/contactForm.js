@@ -46,7 +46,7 @@ export default function ContactUs() {
               name="subject"
               required
             />
-            <textarea id="message" cols="30" rows="10" name="message" placeholder="Écrire Votre Message Ici !" required/>
+            <textarea id="message" cols="30" rows="10" name="message" placeholder="Comment nous pouvons vous aider !" required/>
             <input type="submit" value="Send" />
           </form>
         </div>

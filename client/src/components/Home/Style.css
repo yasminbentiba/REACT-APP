@@ -1,10 +1,12 @@
 .home {
     height: 500px;
-    background: url('https://www.portailsudmaroc.com/images/actualite/lsdutht.jpg');
+     background: url('https://www.portailsudmaroc.com/images/actualite/lsdutht.jpg');
     background-size: cover;
     background-position: center;
     text-align: center;
     position: relative;
+    margin-top: 30px;
+    border-radius: 1%;
 }
 
 .home .home-information {

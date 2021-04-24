@@ -1,0 +1,64 @@
+.formSignup {
+    
+    margin: 30px auto 30px auto ;
+  width: 50%;
+  padding: 10px;
+  background-image:url("../../images/back.jpg") ;
+  background-color: rgba(179, 247, 247, 0.349);
+  border-radius: 5%;
+}
+
+ 
+.image{
+    float: right;
+  width: 40px;
+  height: 300px;
+}
+.avatar{
+  margin: auto;
+  border-radius: 50%;
+  font-size: 33px;
+  background-color:#ffff ;
+  color: #0a0805ef;
+  justify-content: center;
+  box-shadow: 1px 2px 3px #1d180cef ;
+}
+
+.transparence{
+  width: 100%;
+  padding: 10px;
+  background-color:#ffff ;
+  color: #0a0805ef;
+  border-radius: 10px;
+  border:solid 1px #c5c2baef;
+  display: flex;
+  justify-content: center;
+  box-shadow: 1px 2px 3px #1d180cef ;
+}
+
+a{
+    color:#1b5ec4;
+}
+
+.btnSignup{
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+
+  padding: 10px;
+  background-color:#ffff ;
+  color: #0a0805ef;
+  border-radius: 10px;
+  border:solid 1px #c5c2baef;
+  display: flex;
+  justify-content: center;
+  box-shadow: 1px 2px 3px #1d180cef ;
+
+    
+}
+
+  .btnSignup:hover{ 
+    
+    color: #ffff;
+    background: #1b5ec4;
+  }

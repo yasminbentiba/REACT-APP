@@ -1,58 +1,52 @@
 .annuaire {
     height: auto;
-    padding: 50px 0;
+    padding: 1% 1% 1% 1% ;
+    margin: 5% 0% 0% 0%;
     overflow: hidden;
-    background: #fff
+    border-radius: 1%;
+    border:solid 1px #c5c2baef;
+    justify-content: center;
+    box-shadow: 1px 2px 3px #1d180cef ;
 }
 
-.annuaire .annuaire-title {
-    font-size: 60px; 
-}
 
-.annuaire .annuaire-title span {
-    font-weight: normal
-}
-
-.annuaire .part {
-    margin-top: 20px;
-    width: 30%;
+.part {
     float: left;
-    height: auto;
     padding: 20px 0;
     border: 1px solid #888;
-    box-sizing: border-box;
     text-align: center;
-    margin-left: 5%
+    margin-left: 5%;
+    margin-right: 0%;
+    margin-top: 1%;
+    margin-bottom: 1px;
+    padding:10px;
+    justify-content: center;
+    box-shadow: 1px 2px 3px #1d180cef ;
+    overflow: hidden;
+    border-radius: 5%;
+    border:solid 1px #c5c2baef;
+    height: 300px;
+    min-height: 200px;
+  width: 200px;
 }
-
-.annuaire .first {
-    margin-left: 0
-}
-
-.annuaire .part .icon {
-    color: #888;
-    margin-bottom: 20px
-}
-
-.annuaire .part .part-title {
+.part-title {
     font-size: 25px;
     color: #eb5424;
     margin-bottom: 20px
 }
 
-.annuaire .part .line {
+ .line {
     width: 60%;
     margin: auto;
-    margin-bottom: 20px
 }
 
-.annuaire .part .part-desc {
+ .part-desc {
     font-size: 14px;
     color: #888;
-    padding: 10px
+    padding-top: 10px;
 }
 
-@media (max-width: 50px) {
+/* @media (max-width: 50px) {
     .annuaire .part {
         width: 50%;
         float: none;
@@ -60,7 +54,8 @@
         
     }
 }
-
+ */
+ /* 
 @media (min-width: 50px )and (max-width:50px) {
     .annuaire .part {
         width: 47%;
@@ -70,8 +65,14 @@
         margin-left: 0
     }
 }
+ */
 
-/* MODAL */
+
+
+
+ 
+
+/* ---------------------MODAL---------------------------------------------------------------- */
 /* Background effect. It covers the entire site */
 .modal {
     background-color: rgb(0,0,0); /* Fallback color */
@@ -98,14 +99,21 @@
     border-radius: 20px; /* Optional. Rounds container corners */
 }
 /* Close button */
-.close {
-   color: #aaaaaa;
-   float: right; /* Positioned to the right of the parent container whichever size it is */
-   font-size: 25px;
-   font-weight: bold;
+.closeatelier {
+    color: rgb(255, 255, 255);
+    text-shadow: rgb(255 255 255) 0px 1px 0px;
+    background-color: red;
+    width: 25px;
+    align-self: flex-end;
+    font-size: 20px  
 }
-.close:hover, 
-.close:focus {
+
+.x{
+    padding: 5px;
+}
+
+.closeatelier:hover, 
+.closeatelier:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;

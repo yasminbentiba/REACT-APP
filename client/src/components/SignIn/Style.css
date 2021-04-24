@@ -5,6 +5,10 @@
   margin: auto;
   border-radius: 50%;
   font-size: 33px;
+  background-color:#ffff ;
+  color: #0a0805ef;
+  justify-content: center;
+  box-shadow: 1px 2px 3px #1d180cef ;
 }
 
 .formSignIn {
@@ -13,21 +17,35 @@ width: 50%;
 padding: 10px;
 background-image:url("../../images/back.jpg") ;
 background-color: rgba(179, 247, 247, 0.349);
+border-radius: 5%;
 }
 
 .password ,.email{
   margin-top: 25px;
+  
+  padding: 10px;
+  background-color:#ffff ;
+  color: #0a0805ef;
+  border-radius: 10px;
+  border:solid 1px #c5c2baef;
+  display: flex;
+  justify-content: center;
+  box-shadow: 1px 2px 3px #1d180cef ;
 }
 
 .btnsignin{ 
-  width: 64%;
-  background: #cccccc;
-  border-radius: 11%;
-  border: none;
-  color: #ffff;
-  margin: 0% 20% 8% 20%;
-  padding: 8px;
-  height: 36px; 
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+
+  padding: 10px;
+  background-color:#ffff ;
+  color: #0a0805ef;
+  border-radius: 10px;
+  border:solid 1px #c5c2baef;
+  display: flex;
+  justify-content: center;
+  box-shadow: 1px 2px 3px #1d180cef ; 
 }
 
 .btnsignin:hover{ 

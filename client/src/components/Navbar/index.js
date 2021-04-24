@@ -19,13 +19,13 @@ const Navbar=()=> {
                 
                 
                 <ul className="ul-list">
-                    <li className="list-item"><a href="/">Home</a></li>
-                    <li className="list-item"><a href="/annuaire">Annuaire</a></li>
-                    <li className="list-item"><a href="/forum">Forum</a></li>
-                    <li className="list-item"><a href="/about">About</a></li>
-                    <li className="list-item"><a href="/contact">Contact</a></li>
-                    <li className="list-item"><a href="/signUp" ><button style={{borderRadius: "50%"}}><PersonAddOutlinedIcon /></button></a> </li>
-                    <li className="list-item"><a href="/profil" ><button><Avatar name="Foo Bar" /></button></a> </li>
+                    <li className="list-item"><a className="liennavbar" href="/">Home</a></li>
+                    <li className="list-item"><a className="liennavbar" href="/annuaire">Annuaire</a></li>
+                    <li className="list-item"><a className="liennavbar" href="/forum">Forum</a></li>
+                    <li className="list-item"><a className="liennavbar" href="/about">About</a></li>
+                    <li className="list-item"><a className="liennavbar" href="/contact">Contact</a></li>
+                    <li className="list-item"><a className="liennavbar" href="/signUp" ><button style={{borderRadius: "50%"}}><PersonAddOutlinedIcon /></button></a> </li>
+                    <li className="list-item"><a className="liennavbar" href="/profile" ><button><Avatar name="Foo Bar" /></button></a> </li>
 
                 </ul>
                 

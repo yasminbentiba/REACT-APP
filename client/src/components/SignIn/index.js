@@ -77,8 +77,8 @@ class SignIn extends Component {
       logInLoading: true,
     });
 
-    fetch(RESTAPIUrl + '/api/account/signin', {
-      method: 'POST',
+    fetch(RESTAPIUrl + '/users', {
+      method: 'GET',
       headers: {
         'Content-Type': 'application/json'
       },

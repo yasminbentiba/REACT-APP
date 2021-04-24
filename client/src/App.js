@@ -7,10 +7,14 @@ import contactForm from "../src/components/Contact/contactForm";
 import Navbar from "./components/Navbar";
 import Index from "./components/Index";
 import Footer from "./components/Footer"; //ne pas la retirer !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-import Forum from "./components/Forum/forum2";
+import Forum2 from "./components/Forum/forum2";
 import About from "./components/About";
 import Annuaire from "./components/Annuaire";
-import SignUp from "./components/SignUp"
+import SignUp from "./components/SignUp";
+import listeSujets from './components/Sujet/listesujets';
+import Profile from './components/User/profile'
+
+
 /* import annuaires from "./images/annuaires.png" */
 
 /* import inscription from "./components/Inscription/inscription";
@@ -31,16 +35,24 @@ const App = () => {
 
     <BrowserRouter>
       <Navbar></Navbar>
+
+
+
+
       <Route exact path="/" component={Index} />
       <Route exact path="/contact" component={contactForm} />
 
-      <Route exact path="/forum" component={Forum} />
+      <Route exact path="/forum" component={Forum2} />
+
       <Route exact path="/annuaire" component={Annuaire} />
       <Route exact path="/about" component={About} />
       <Route exact path="/signUp" component={SignUp}/>
       
       <Route exact path="/sujetform" component={SujetForm}/>
+      <Route exact path="/listesujets" component={listeSujets}/>
+      <Route exact path="/profile" component={Profile} />
 
+      
      <Route exact path="/signin" component={SignIn}/> 
       {/*         <Route exact path='/inscription' component={inscription} />
        */}

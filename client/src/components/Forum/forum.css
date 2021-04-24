@@ -3,18 +3,23 @@
    
     
 }
- form{
+ .formforum{
+   padding-top: 1%;
+    margin-top: 20px;
     font-size: 14px;
     font-family: 'Tittilium Web', sans-serif;
-    background:#ffff;
+   
     color: rgb(14, 7, 7);
+    border-radius: 18px;
+    background-attachment:fixed;
  }
 
+ 
 
-a{
-    color:#ff8800;
+.lienforum{ color: teal;
     font-weight: bolder;
-    text-decoration: none;
+    text-decoration: solid;
+    
 }
 
 h1{
@@ -24,8 +29,8 @@ h1{
 }
 
 .container{
-    margin: 20px;
-    padding:20px;
+    margin: 0px 0px 0px 0px;
+    padding: 5px
 }
 
 .subforum{
@@ -34,7 +39,7 @@ margin-top: 20px;
 }
 
 .subforum-title{
-background-color:#d49203ef ;
+background-color:#29272750 ;
 padding: 5px;
 border-radius: 5px;
 margin: 4px;
@@ -48,7 +53,7 @@ margin: 4px;
     padding: 10px;
     margin: 4px;
     border-radius: 5px;
-    background-color:#d492035b ;
+    background-color:#f8f7f45b ;
 }
 .center{
 display: flex;
@@ -70,12 +75,15 @@ align-items: center;
 
 /*search-box  */
 .search-box{
-border:solid 1px #d49203ef;
-margin-top: 20px;
-padding: 40px;
-display: flex;
-justify-content: center;
-box-shadow: 1px 2px 3px #d49203ef ;
+    border-radius: 20px;
+    border:solid 1px #c5c2baef;
+    margin-top: 20px;
+    margin-right: 35px;
+    margin-left: 35px;
+    padding: 7px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 1px 2px 3px #1d180cef ;
 }
 .search-box select{
     padding: 10px;
@@ -87,12 +95,41 @@ box-shadow: 1px 2px 3px #d49203ef ;
 .search-box button{
     padding: 10px;
     background-color:#ffff ;
-    color: #d49203ef;
+    color: #0a0805ef;
+    border-radius: 10px;
+    border:solid 1px #c5c2baef;
+    display: flex;
+    justify-content: center;
+    box-shadow: 1px 2px 3px #1d180cef ;
+    
 }
 
-.search-box button:hover{
+.addbtn{
+    border-radius: 50%;
+    border:solid 1px #c5c2baef;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 1px 2px 3px #1d180cef ;
+}
+.add{
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+    padding: 0px;
+    border-radius: 50%;
+}
+.add :hover{
+    color: #ffff;
+    
+}
 
-    background-color:#d49203ef ;
+.search-box button .addbtn:hover{
+
+    background-color:#070603ef ;
     color: #ffff;
     box-shadow: #ffff;
 }
@@ -144,13 +181,12 @@ box-shadow: 1px 2px 3px #d49203ef ;
         font-size: 35px;
     }
 
-    form{
+   /*  form{
         font-size: 16px;
     }
-
+ */
     h1{
         font-size: 18px;
 
     }
 }
-

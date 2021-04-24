@@ -2,8 +2,11 @@ import React, { Component } from "react";
 
 import Home from "../Home";
 import About from "../About";
-import Forum from "../Forum";
 import Annuaire from "../Annuaire";
+import Forum2 from "../Forum/forum2";
+
+/* 
+import Slideshow from '../slide/slide'; */
 
 import SocialMedia from "../SocialMedia";
 
@@ -13,9 +16,10 @@ class Index extends Component {
       <div>
         
         <Home/>
-        
+        {/* <Slideshow/> */}
         <Annuaire/>
-        <Forum/>
+        <Forum2/>
+
         <About/>
         <SocialMedia/>
       

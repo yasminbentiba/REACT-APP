@@ -1,16 +1,18 @@
 const mongoose = require('mongoose');
 
 const UserSchema = new mongoose.Schema({
-    id:{
-        type: String,
-        unique:true
-    },
 
-    name: {
+    firstName: {
         type: String,
         default: '',
         required:true
     },
+    lastName: {
+        type: String,
+        default: '',
+        required:true
+    },
+    
 
     email: {
         type: String,
@@ -31,18 +33,19 @@ const UserSchema = new mongoose.Schema({
         longitude : {type : String}   
       },
 
-    userType:{
+    atelierType:{
         type: String,
-        enum:['Concessionnaire','Tolier','Mécanicien','Electricien'],
+        enum:['pieceDetachee','pieceCarroserie','atelierMecanique','atelierElectrique','atelierTolerie','concessionnaire','atelierTeinture','atelierServiceRapide'],
+        required:false,
+    },
+
+    role:{
+        type: String,
+        enum:['user','prestataire'],
         required:true,
-
-
     },
 
-    register_date:{
-        type:Date,
-        default:Date.now
-    },
+    //timestamps: true,
     
      image:{
          type:String,

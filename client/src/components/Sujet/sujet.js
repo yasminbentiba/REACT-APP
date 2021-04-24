@@ -43,7 +43,7 @@ class SujetForm extends React.Component {
             <label for="titresujet">Titre Sujet</label>
           </div>
           <div className="col-75">
-            <input
+            <input className="inputsujet"
               type="text"
               id="titresujet"
               name="titresujet"
@@ -78,8 +78,8 @@ class SujetForm extends React.Component {
               <label for="myfile">Votre logo</label>
             </div>
             <div className="col-75">
-              <input
-              className="addfileinput"
+              <input 
+              className="addfileinput inputsujet"
                 type="file"
                 id="myfile"
                 name="myfile"
@@ -92,7 +92,7 @@ class SujetForm extends React.Component {
           </div>
         
         <div className="row">
-          <input type="submit" value="Submit" />
+          <input className="inputsujet" type="submit" value="Submit" />
         </div>
       </form>
     );

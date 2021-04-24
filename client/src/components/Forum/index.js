@@ -1,7 +1,12 @@
 import React from "react";
-import SearchRoundedIcon from '@material-ui/icons/SearchRounded';import DirectionsCarOutlinedIcon from "@material-ui/icons/DirectionsCarOutlined";
+import SearchRoundedIcon from '@material-ui/icons/SearchRounded';
+import DirectionsCarOutlinedIcon from "@material-ui/icons/DirectionsCarOutlined";
+
+
+import PostAddIcon from '@material-ui/icons/PostAdd';
 import "./forum.css";
-import SujetForm from '../Sujet/sujet'
+
+
 
 
 
@@ -12,13 +17,15 @@ const Forum = () => {
     e.preventDefault();
     console.log('Le lien a été cliqué.');
   } */
+
+
   return (
     
-    <form>
-      <a href="/sujetForm" /* onClick={handleClick} */>
-      Cliquer ici pour ajouter un sujet
-    </a>
-
+    <div className="formforum">
+      
+      {/* --------------------------- */}
+     
+{/* -------------------------------- */}
       <div className="search-box">
         <select name='' id=''>
           <option value='tout'> Tout</option>
@@ -27,12 +34,18 @@ const Forum = () => {
         </select>
         <input type="text" name="search" placeholder="recherche ..."/>
         <button> <i className="fa fa-search"> <SearchRoundedIcon/></i></button>
+
+        <a className="lienforum creerSujet" href="/sujetForm" /* onClick={handleClick} */>
+     
+        <button className=" addbtn"><i className=" add"><PostAddIcon /></i></button>
+      
+    </a>
       </div>
       <div className="container">
         <div className="subforum">
           
           <div className="subforum-title">
-            <h1>informations générales</h1>
+            <h1>informations générales  </h1>
           </div>
 
           <div className="subforum-row">
@@ -45,7 +58,7 @@ const Forum = () => {
             
             <div className="subforum-description subforum-column center">
               <b><h1>
-                <a href="/sujet">titre de la description</a>
+                <a className="lienforum" href="/listesujets">sujet 1</a>
               </h1> <br/>
               <p>
                 {" "}
@@ -56,8 +69,8 @@ const Forum = () => {
                 <span> 24 vues | 15 commentaires </span>
               </div>
               <div className="subforum-info subforum-column center">
-                <b><a href="">dernier commentaire</a> par{" "}
-                <a href="">Nom de l'abonné</a>
+                <b><a className="lienforum" href="">dernier commentaire</a> par{" "}
+                <a className="lienforum" href="">Nom de l'abonné</a>
                 <br/> le 
                 <small> 22-mar-21 </small></b>
             </div>
@@ -75,7 +88,7 @@ const Forum = () => {
             
             <div className="subforum-description subforum-column center">
               <b><h1>
-                <a href=""> titre de la description</a>
+                <a className="lienforum" href=""> titre de la description</a>
               </h1> <br/>
               <p>
                 {" "}
@@ -86,8 +99,8 @@ const Forum = () => {
                 <span> 24 vues | 15 commentaires </span>
               </div>
               <div className="subforum-info subforum-column center">
-                <b><a href="">dernier commentaire</a> par{" "}
-                <a href="">Nom de l'abonné</a>
+                <b><a className="lienforum" href="">dernier commentaire</a> par{" "}
+                <a className="lienforum" href="">Nom de l'abonné</a>
                 <br/> le 
                 <small> 22-mar-21 </small></b>
             </div>
@@ -105,7 +118,7 @@ const Forum = () => {
             
             <div className="subforum-description subforum-column center">
             <b><h1>
-                <a href="">titre de la description</a>
+                <a className="lienforum" href="">titre de la description</a>
               </h1> <br/>
               <p>
                 {" "}
@@ -116,8 +129,8 @@ const Forum = () => {
                 <span> 24 vues | 15 commentaires </span>
               </div>
               <div className="subforum-info subforum-column center">
-                <b><a href="">dernier commentaire</a> par{" "}
-                <a href="">Nom de l'abonné</a>
+                <b><a className="lienforum" href="">dernier commentaire</a> par{" "}
+                <a className="lienforum" href="">Nom de l'abonné</a>
                 <br/> le 
                 <small> 22-mar-21 </small></b>
             </div>
@@ -135,7 +148,7 @@ const Forum = () => {
             
             <div className="subforum-description subforum-column center">
               <b><h1>
-                <a href="">titre de la description</a>
+                <a className="lienforum" href="">titre de la description</a>
               </h1> <br/>
               <p>
                 {" "}
@@ -146,8 +159,8 @@ const Forum = () => {
                 <span> 24 vues | 15 commentaires </span>
               </div>
               <div className="subforum-info subforum-column center">
-                <b><a href="">dernier commentaire</a> par{" "}
-                <a href="">Nom de l'abonné</a>
+                <b><a className="lienforum" href="">dernier commentaire</a> par{" "}
+                <a className="lienforum" href="">Nom de l'abonné</a>
                 <br/> le 
                 <small> 22-mar-21 </small></b>
             </div>
@@ -165,7 +178,7 @@ const Forum = () => {
             
             <div className="subforum-description subforum-column center">
               <b><h1>
-                <a href="">titre de la description </a>
+                <a className="lienforum" href="">titre de la description </a>
               </h1> <br/>
               <p>
                 le contenue de la description: les voitures les plus connues{" "}
@@ -175,8 +188,8 @@ const Forum = () => {
                 <span> 24 vues | 15 commentaires </span>
               </div>
               <div className="subforum-info subforum-column center">
-                <b><a href="">dernier commentaire</a> par{" "}
-                <a href="">Nom de l'abonné</a>
+                <b><a className="lienforum" href="">dernier commentaire</a> par{" "}
+                <a className="lienforum" href="">Nom de l'abonné</a>
                 <br/> le 
                 <small> 22-mar-21 </small></b>
             </div>
@@ -194,7 +207,7 @@ const Forum = () => {
             
             <div className="subforum-description subforum-column center">
             <b><h1>
-                <a href="">titre de la description</a>
+                <a className="lienforum" href="">titre de la description</a>
               </h1> <br/>
               <p>
                 {" "}
@@ -542,7 +555,7 @@ const Forum = () => {
 
         </div>
       </div>
-    </form>
+    </div>
   );
 };
 

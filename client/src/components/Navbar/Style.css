@@ -31,7 +31,7 @@
     display: inline-block;
 }
 
-.navbar .ul-list .list-item a {
+.navbar .ul-list .list-item .liennavbar {
     display: block;
     color: #222;
     text-decoration: none;
@@ -39,7 +39,7 @@
     font-weight: bold;
 }
 
-.navbar .ul-list .list-item a:hover {
+.navbar .ul-list .list-item .liennavbar:hover {
     color: #eb5424
 }
 

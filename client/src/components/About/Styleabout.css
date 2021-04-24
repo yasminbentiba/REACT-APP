@@ -1,16 +1,16 @@
 
 .creative {
     height: 500px;
-    background: url('https://www.norsar.no/getfile.php/132529-1471867669/norsar.no/About/about-us-banner.jpg%20%28content_full_width%29.jpg');
+    background-image: url(../../images/blackback.jpg);
     background-size: cover;
     background-position: center;
-    background-attachment: fixed
-}
+    background-attachment: fixed;
+    border-radius: 10px;}
 
 .creative .creative-info {
     padding-top: 100px;
     width: 50%;
-    float: right;
+    float: left;
 }
 
 .creative .creative-info .info-title {
@@ -34,7 +34,7 @@
     line-height: 1.8
 }
 
-.creative .creative-info .info-desc a {
+.creative .creative-info .info-desc .lienabout{
     text-decoration: none
 }
 

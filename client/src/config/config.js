@@ -1,3 +1,4 @@
-const RESTAPIUrl  = 'http://localhost:4000'; 
-
-export default RESTAPIUrl;
+module.exports = {
+    db: '//127.0.0.1:27017/users',
+    RESTAPIport: '4000',
+};

@@ -1,14 +1,11 @@
 import React, { Component } from "react";
-import "./Style.css";
+import "./signup.css";
 import { FormGroup, FormControl, Alert } from "react-bootstrap";
 import "whatwg-fetch";
 import browserHistory from "../../Router/browserHistory";
 import {
-  MenuItem,
-  Button,
   RadioGroup,
-  Select,
-  Grid,
+  
   Avatar,
 } from "@material-ui/core";
 
@@ -18,8 +15,12 @@ class SignUp extends Component {
   constructor(props, context) {
     super(props, context);
 
-    this.handleChangeRadioUser = this.handleChangeRadioUser.bind(this);
-    this.handleChangeRadioPrestatair = this.handleChangeRadioPrestatair.bind(
+  
+    this.handleChangeRadio = this.handleChangeRadio.bind(
+      this
+    );
+    
+    this.handleChangeSelect = this.handleChangeSelect.bind(
       this
     );
 
@@ -46,14 +47,15 @@ class SignUp extends Component {
       password: "",
       email: "",
       confPass: "",
-      firstname: "",
-      lastname: "",
+      firstName: "",
+      lastName: "",
       signInLoading: false,
       show: false,
       signupStatus: "success",
       signUpMessage: "You have signed up successfully. Proceed to login.",
       user: true,
       prestataire: false,
+      atelierType:""
     };
   }
 
@@ -95,24 +97,27 @@ class SignUp extends Component {
   }
 
   handleChangeFirstName(e) {
-    this.setState({ firstname: e.target.value });
+    this.setState({ firstName: e.target.value });
   }
 
   handleChangeLastName(e) {
-    this.setState({ lastname: e.target.value });
+    this.setState({ lastName: e.target.value });
   }
 
   handleDismiss() {
     this.setState({ show: false });
   }
-  handleChangeRadioPrestatair() {
-    this.setState({ user: false, prestataire: true });
-  }
-  handleChangeRadioUser() {
-    this.setState({ user: true, prestataire: false });
+  handleChangeRadio( ) {
+    console.log('handleChangeRadio',this.state.prestataire,this.state.user);
+    this.setState({ user: !this.state.user, prestataire: !this.state.prestataire});
   }
   handleShow() {
     this.setState({ show: true });
+  }
+
+  handleChangeSelect(event){
+    console.log('value:',event.target);
+    //this.setstate({})
   }
 
   displayAlert() {
@@ -132,12 +137,13 @@ class SignUp extends Component {
     this.setState({ signInLoading: true });
     const newUser = {
       password: this.state.password,
-      firstname: this.state.firstname,
-      lastname: this.state.lastname,
+      firstName: this.state.firstName,
+      lastName: this.state.lastName,
       email: this.state.email,
+      role:  (this.state.user ? "user" : "prestataire")
     };
 
-    fetch("http://localhost:5000" + "/api/account/signup", {
+    fetch("http://localhost:4000"+"/users/add" , {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -149,15 +155,18 @@ class SignUp extends Component {
       .then((json) => {
         if (json.message === "Signed Up") {
           this.setState({
-            signInLoading: false,
-            show: true,
-            signupStatus: "success",
-            signUpMessage: "You have signed up successfully. Proceed to login.",
-            firstname: "",
-            lastname: "",
             password: "",
-            confPass: "",
-            email: "",
+      email: "",
+      confPass: "",
+      firstName: "",
+      lastName: "",
+      signInLoading: false,
+      show: false,
+      signupStatus: "success",
+      signUpMessage: "You have signed up successfully. Proceed to login.",
+      user: this.state.user,
+      prestataire: this.state.prestataire,
+      atelierType:""
           });
           browserHistory.push("/SignIn");
         } else if (json.message === "Error: Account Already Exists") {
@@ -166,11 +175,14 @@ class SignUp extends Component {
             show: true,
             signupStatus: "warning",
             signUpMessage: "Account already Exists. Procced to login",
-            firstname: "",
-            lastname: "",
+            firstName: "",
+            lastName: "",
             password: "",
             confPass: "",
             email: "",
+            user: true,
+            prestataire: false,
+            atelierType:""
           });
         } else if (json.message === "Error: Server Error") {
           this.setState({
@@ -178,11 +190,14 @@ class SignUp extends Component {
             show: true,
             signupStatus: "danger",
             signUpMessage: "Unexpected error. Please try again later.",
-            firstname: "",
-            lastname: "",
+            firstName: "",
+            lastnNme: "",
             password: "",
             confPass: "",
             email: "",
+            user: this.state.user,
+            prestataire:this.state.prestataire,
+            atelierType:""
           });
         }
       });
@@ -197,20 +212,23 @@ class SignUp extends Component {
             </button>
           </Avatar>
           <br />
-          <FormGroup controlId="signUpName">
+          <FormGroup
+          controlId="signUpFirstName" >
             <FormControl
               className="name transparence"
               type="text"
-              value={this.state.firstname}
+              value={this.state.firstName}
               placeholder="First Name"
               onChange={this.handleChangeFirstName} //pour changer le nom puis on définie le bind pour la fonction
               required
-            />
+            /></FormGroup>
             <br />
+            <FormGroup
+            controlId="signUpLastName" >
             <FormControl
               className="name transparence"
               type="text"
-              value={this.state.lastname}
+              value={this.state.lastName}
               placeholder="Last Name"
               onChange={this.handleChangeLastName} //pour changer le nom puis on définie le bind pour la fonction
               required
@@ -269,7 +287,7 @@ class SignUp extends Component {
                 <input
                   type="radio"
                   checked={this.state.user}
-                  onChange={this.handleChangeRadioUser}
+                  onChange={this.handleChangeRadio}
                 />
                 User
               </label>
@@ -279,7 +297,7 @@ class SignUp extends Component {
                 <input
                   type="radio"
                   checked={this.state.prestataire}
-                  onChange={this.handleChangeRadioPrestatair}
+                  onChange={this.handleChangeRadio}
                 />
                 Prestataire
               </label>
@@ -292,15 +310,15 @@ class SignUp extends Component {
             >
               <label>
                 Type d'atelier:
-                <select value={this.state.value} className="transparence">
-                  <option value="grapefruit">Atelier mécanique</option>
-                  <option value="lime">Atelier électricité</option>
-                  <option value="mango">Atelier tolerie</option>
-                  <option value="grapefruit">Concessionnaire </option>
-                  <option value="lime">Atelier peintures auto</option>
-                  <option value="coconut">Atelier service rapide</option>
-                  <option value="mango"> Pièce carrosorie</option>
-                  <option value="coconut">Pièces détachées</option>
+                <select value={this.state.value} onChange={this.handleChangeSelect} className="transparence">
+                  <option value="atelierMecanique">Atelier mécanique</option>
+                  <option value="atelierElectrique">Atelier électricité</option>
+                  <option value="atelierTolerie">Atelier tolerie</option>
+                  <option value="concessionnaire">Concessionnaire </option>
+                  <option value="atelierTeinture">Atelier peintures auto</option>
+                  <option value="atelierServiceRapide">Atelier service rapide</option>
+                  <option value="pieceCarroserie"> Pièce carrosorie</option>
+                  <option value="pieceDetachee">Pièces détachées</option>
                 </select>
               </label>
               <br /> <br />
